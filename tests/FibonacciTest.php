@@ -11,9 +11,17 @@ class FibonacciTest extends TestCase
         return 0;
     }
 
-    public function testFibonacci() : void
+    /**
+     * @dataProvider getData
+     */
+    public function testFibonacci($expected, $case) : void
     {
-        $this->assertEquals(0, $this->fibonacci(0));
-        $this->assertEquals(1, $this->fibonacci(1));
+        $this->assertEquals($expected, $this->fibonacci($case));
+    }
+
+    public function getData()
+    {
+        yield 'zero' => [0, 0];
+        yield 'one' => [1, 1];
     }
 }

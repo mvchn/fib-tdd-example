@@ -13,7 +13,7 @@ class FibonacciTest extends TestCase
 
     public function testFibonacci() : void
     {
-
         $this->assertEquals(0, $this->fibonacci(0));
+        $this->assertEquals(1, $this->fibonacci(1));
     }
 }

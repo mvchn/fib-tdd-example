@@ -11,7 +11,7 @@ class FibonacciTest extends TestCase
         if ($n === 0) {  return 0; }
         if ($n <= 2) { return 1; }
 
-        return 0;
+        return 2;
     }
 
     /**
@@ -26,5 +26,7 @@ class FibonacciTest extends TestCase
     {
         yield 'zero' => [0, 0];
         yield 'one' => [1, 1];
+        yield 'two' => [1, 2];
+        yield 'three' => [2, 3];
     }
 }
